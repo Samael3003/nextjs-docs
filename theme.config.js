@@ -1,6 +1,6 @@
 export default {
-  github: 'https://github.com/Samael3003',
-  docsRepositoryBase: 'https://github.com/Samael3003',
+  github: 'https://github.com/shuding/nextra',
+  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
   titleSuffix: ' – Samael3003',
   logo: (
     <>
