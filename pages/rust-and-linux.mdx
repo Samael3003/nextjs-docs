@@ -1,0 +1,17 @@
+
+# Linux will support the Rust programming language in its kernel from version 6.1.
+
+In a recent post on the Linux Kernel Mailing List, Linus Torvalds promised “a number of fairly core new things” in Linux kernel(opens in new tab) 6.1, and the first one seems to have appeared: as reported by The Register(opens in new tab), the Rust programming language will be directly supported in the OS.
+
+The news isn't exactly unexpected as patches to add Rust to Linux go back for some time, with version 9 appearing in August 2022. At the recent Open Source Summit Torvalds' keynote indicated that we should expect Rust to appear in 6.1. Right now, Rust has a group of developers working on support for the Linux Kernel and in a pull request made by Kees Cook on October 1, accepted by Torvalds, we see the first steps towards its inevitable arrival in 6.1.
+
+Adding support for Rust adds about 12,500 lines of code to the Linux kernel, which is itself written in C, with which Rust has a certain amount of interoperability. However, GCC, the Gnu Compiler Collection, cannot compile the new language, and Clang, which can, has its own shortcomings if you want to write code for architectures other than x86 and Arm. With Rust set to receive official Linux support, and an eager community of kernel hackers, it can only be a matter of time before Rust is available to more architectures. The new kernel is expected to be available from December this year.
+
+Some developers have already begun showing what can be done with Rust on Linux, with Western Digital’s principal engineer Andreas Hindborg showing off an NVMe SSD driver for Linux written in Rust at the 2022 Linux Plumbers Summit, which had a whole micro conference dedicated to Rust in Linux.
+
+Rust(opens in new tab) is a general-purpose programming language influenced by C++ that was created in 2006 and hit version 1.0 in 2015. It grew out of a personal project by Mozilla employee Graydon Hoare, and was sponsored by Mozilla until 2020, when corporate restructuring caused by the Covid pandemic caused the Rust Foundation to be founded in 2021. Amazon Web Services, Huawei, Google, Microsoft and Mozilla now support the foundation, and Google supports Rust in its Android Open Source Project. The language is notable for its elegance, its zero-tolerance approach to memory safety, and the speed of its growth in popularity.
+
+It’s also known as a high-performance language, created with the intention of marrying the flexible syntax of a high-level language with the hardware control and speed of a low-level one. Parallelism is also one of its fortes, and its strong memory safety - it notably doesn’t incorporate a garbage collector to return memory that’s no longer being referenced by a program to the system, as C# and Java do. The memory errors introduced by C programmers could be a thing of the past with Rust’s memory-safe features.
+
+> ThankYou, Guys for reading my views.
+> May your Day be Happy as it could always :)
