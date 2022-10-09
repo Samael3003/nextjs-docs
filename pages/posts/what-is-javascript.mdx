@@ -1,0 +1,104 @@
+# What Is JavaScript? A Look at the Web’s Most Popular Scripting Language
+
+Who hasn’t experienced a request to update Java when attempting to access certain websites?
+
+While many people are familiar with Java from interactive website features, users may be less familiar with JavaScript — or, indeed, they may wrongly consider the two to be the same.
+
+In this article, we discuss what JavaScript is and the differences between Java and JavaScript. Then we’ll provide an overview of some of the more significant JavaScript functionalities.
+
+Let’s start!
+
+
+## What Is JavaScript?
+
+Most simply put, JavaScript is a popular scripting language for adding interactive functionality and other dynamic web content to web pages. Well-known examples of JavaScript content include fillable forms, photo gallery slideshows, and animated graphics.
+
+JavaScript is also relatively intuitive and straightforward to learn. It is an excellent starting point for those looking to learn more about website development.
+
+JavaScript is the final layer of functionality on highly interactive websites. HTML provides the basic structure for the page. CSS is the fashion feature of your website — it sets the style of your site. JavaScript then adds excitement.
+
+When learning JavaScript, it’s essential to understand the relationship between HTML, CSS, and JavaScript, and how they come together in displaying a website.
+
+
+## What JavaScript Is Used For?
+
+JavaScript has various applications that anyone who has visited interactive web pages or mobile applications will have likely experienced. While website development — including the addition of elements such as interactive forms and animations — is the most traditional use for JavaScript, it also finds use in:
+
+- Web browser-based games — including 2D and 3D games
+- Mobile application development — beneficial because it’s phone-platform agnostic
+- Presentations — the creation of web-based animated slide decks
+
+Although most JavaScript applications are client-side, JavaScript is also helpful in server-side applications, such as creating web servers.
+
+
+## Is JavaScript Secure?
+
+Although JavaScript is widely accepted and used for web development, it does have well-known vulnerabilities. One of the most common cyberattacks introduced through JavaScript vulnerabilities is the cross-site scripting (XSS) attack. Cybercriminals use XSS attacks to gain access to and steal identity information. To minimize exploits, it’s critical to test and review your code during development. Testing methods such as static and dynamic application security testing (SAST and DAST) help identify vulnerabilities at all points of the software development lifecycle. According to the security analysts at Cloud Defense, SAST checks your code for violating security rules and compares the found vulnerabilities between the source and target branches. You’ll get notified if your project’s dependencies are affected by newly disclosed vulnerabilities.
+
+
+## Vanilla JavaScript
+
+Vanilla JavaScript is a lightweight implementation of pure JavaScript language without added libraries. Here, the term “vanilla” refers to uncustomized JavaScript. Many major companies use Vanilla JS, including Google, Microsoft, Apple, Amazon, and others. Vanilla JavaScript is an excellent way to learn the basics of JavaScript programming before adding in ties to more advanced features offered in libraries.
+
+
+## JavaScript Libraries
+
+A JavaScript library is a collection of pre-written code that performs certain functions. Libraries allow even novice users to build useful websites quickly. And they save both novice and experienced users significant time in building sites and applications. While there are many JavaScript libraries, some of the most popular include jQuery, Anime.js, Animate on Scroll, and Leaflet.js.
+
+
+## How JavaScript Relates to Website Frameworks
+
+Website frameworks are advanced website builders, typically with extensive libraries of pre-built functionality and testing suites. You may be familiar with server-side frameworks such as Laravel, Ruby on Rails, or Django. But there are also several popular client-side JavaScript-based frameworks, including React.js, Vue.js, and Node.js.
+
+![reactjs2](https://user-images.githubusercontent.com/103866475/194767717-d0e3c035-39a3-46ea-864f-d810e61c2e7e.jpg)
+
+
+## The JavaScript DOM
+
+The DOM, or Document Object Model, acts as an interface between a programming language such as JavaScript and an underlying document — specifically, HTML and XML documents. DOM is a W3C (World Wide Web Consortium) standard, defined as “a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.” Documents consist of a collection of individual elements and properties (text, buttons, links, etc.).
+
+
+## Basic Components of JavaScript
+
+As with other programming languages, JavaScript uses variables to identify the storage locations of data. Variables may be either global (accessible by any function in the code) or local, also known as block-scoped (accessible only in the block where they are declared). Variables may contain either fixed values (constants known as literals) or alterable values. JavaScript has a particular syntax for declaring (creating) constants and variables, and assigning values to them.
+
+### Declaring a Constant
+
+True constants are created using a const declaration. Const creates read-only, unchangeable, block-scoped constants (“block-scoped” means that the constant is not accessible from outside its declared block). An example of using const to create a constant is:
+
+    const GOLDEN_RATIO = 1.618; // create a constant named GOLDEN_RATIO with value 1.618
+
+Note the use of capital letters for naming the constant; this is a commonly accepted naming convention, although it’s not required. Variable names, including const names, must start with a letter (lowercase or uppercase), the underscore character (_), or the dollar sign ($). They are case-sensitive, so be sure to remember how you name your variables. Constants, unlike variables, must be assigned a value on creation. The following statement will return an error:
+
+    const GOLDEN_RATIO;
+
+
+### Declaring a Variable
+
+Variables are declared using the var keyword. They do not need to have a value assigned upon declaration, although it’s permissible to do so and frequently done. The var keyword has global scope rather than block scope (unless it’s in a function, then it has function scope).
+
+    var variable1; // declare a variable called variable1
+    var variable2 = "2021"; // declare a string variable called variable2 and initialize with value 2021
+    variable1 = "Thank goodness it's" // assign string value to previously declared variable variable1
+    console.log(variable1 + " " + variable2); // display "Thank goodness it's 2021"
+
+Note that statements in JavaScript must end with a semicolon. You can create comments using // — JavaScript ignores anything between // and the end of the line. Variables can contain a variety of data types, including numbers, strings, and objects. Variable assignment in JavaScript is dynamic. So, you can assign a variable to a different data type in the same code.
+
+
+## Hoisting
+
+Now that you understand variable declaration in JavaScript, we can discuss how JavaScript deals with the location of variable declaration. The commonly accepted coding practice calls for declaring variables before, or at the same time, you define them. Some programming languages actually require this. JavaScript, however, allows variables to be declared after they are defined or used. Using a feature called hoisting, JavaScript moves declarations to the top of a current script or function. While hoisting may simplify programming by allowing a programmer to correct a failure to declare without having to scroll back through the code, declaring variables after use is not consistent with best programming practices. Hoisting also can cause unexpected issues, primarily because hoisting only applies to the declaration. If a variable is declared and initialized in the same statement, hoisting will create a declaration at the top of the block and assign the variable an undefined value. Thus, any use of the variable in the block before the actual declaration statement will assume the variable is undefined rather than having the initialization value. Let’s use the example above to review the hoisting behavior:
+
+    var variable_1 = "Thank goodness it's"; // declare and initialize a string variable called variable_1
+    console.log(variable_1 + " " + variable_2); //
+    var variable_2 = "2021" // declare and initialize a string variable called variable2
+    
+While hoisting moves the declaration variable_2 to the top of the block, it does not move the assigned value. This logic works roughly equivalent to the following syntax:
+
+    var variable_1 = "Thank goodness it's"; // declare and initialize a string variable called variable_1
+    var variable_2;
+    console.log(variable1 + " " + variable2); //
+    variable_2 = "2021" // assign string value to variable2
+    
+In either scenario, the final value “Thank goodness it’s 2021” is not part of the output. We recommend you use the best practice of declaring variables to avoid potential issues and create cleaner code.
+
