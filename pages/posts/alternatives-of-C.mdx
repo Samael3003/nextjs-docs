@@ -1,1 +1,70 @@
 # Hundreds of C/C++ alternatives will come, but C/C++ will be with us forever!
+
+Every CPU comes with a circuitry language called ISA (Instruction Set Architecture) Assembly. The ISA Assembly is a hardware language that consists of operations for basic data manipulation, mathematical calculations, and structured programming (i.e., jmp). But, writing Assembly code for every computing requirement is undoubtedly time-consuming, so past programmers invented human-friendly languages and compilers.
+
+The pioneer computer scientist Dennis Ritchie implemented the C programming language for the Unix operating system development requirements. At this period, the entire computer technology field was initializing its foundation, so almost all programmers used C for building early computing programs, such as compilers, operating systems, database software, and networking programs. Later, C++ extended C and gave birth to a new programming language with more developer features by maintaining C’s performance factors.
+
+In the 20s, programmers implemented C/C++ alternatives such as Go, D, Rust, and Carbon with various features that C/C++ never offers. These languages still compete as C/C++ alternatives rather than replacements because of the following reasons:
+
+## C and C++ Are Foundation Languages
+
+If we find the birth of every computer program that saves our lives today, we will eventually find C or C++. Think about what you do now. You may read this story on Google Chrome — The Chromium open-source browser (Blink rendering engine, V8, and browser app) is written in C++. Assume that you are running Chrome on GNU/Linux — Linux kernel is written in C. MySQL, the most popular relational database management system, is written in C/C++. All popular operating systems offer a core C or C++ API for kernel functions.
+
+Even though stable C/C++ alternatives exist, many programmers still prefer C or C++ for systems programming. In most cases, programmers choose C++ because it’s the best language to communicate with operating-system level APIs. For example, Google wrote the Flutter engine in C++:
+
+![1_--h6UNGIfwmxT9Vg7358iw](https://user-images.githubusercontent.com/103866475/194766543-55f155c9-a3bb-4080-a342-ec461ab07681.png)
+
+Most core components in the computing field use C/C++ as the implementation language for decades, and C/C++ languages are maintaining standards for language syntax for a long time. Grooming a replacement for C/C++ is like changing the foundation of a house after all construction works.
+
+
+## C and C++ Give Full Control over What We Write
+
+C/C++ offers freedom for handling program resources as you wish while writing source codes. For example, C/C++ lets you allocate/deallocate physical memory directly for storing data elements. C/C++ offers a way to work with native operating system-level threads rather than managing a separate concurrency runtime as Go. C/C++ doesn’t provide automatic memory management (garbage collection) feature, so programmers should prevent memory leaks carefully and efficiently. See how Meta’s Folly library source code implements manual memory management strategies:
+
+![1_N1-RtxrfgeGPBx-5Kmw66Q](https://user-images.githubusercontent.com/103866475/194766589-05f489c9-d61e-454b-9c17-25bc8fb4f3c0.png)
+
+Automatic memory management and limitations for memory handling are undoubtedly good approaches for making a language modern, productive, and more abstract — but these features create a performance overhead in the language runtime and reduce the programmer’s freedom.
+
+C and C++ don’t restrict memory access, offer manual memory management operations, and give freedom to programmers by letting programmers control the program as they wish. When you write programs with C/C++, your source code will do what you instructed efficiently — nothing else.
+
+
+## C and C++ Are Indeed Fast and Efficient
+
+A particular program’s efficiency depends on two main factors: the time complexity of algorithms used by the programmer and the efficiency of the binary program. We can undoubtedly control the complexity of algorithms since we can change them by updating the source code. On the other hand, compilers produce binaries, so we have no easy way to improve efficiency from that aspect.
+
+But, we can choose a compiler that produces fast and efficient binaries. The GNU C compiler generates platform-specific binaries without embedding a dedicated runtime environment. The C programming execution model uses a minimal startup code define in the crt0 Assembly instructions segment. Look at the following example crt0 section on Linux:
+
+![1_1rlhCQ2mh2Ghz646wT_2bQ](https://user-images.githubusercontent.com/103866475/194766656-b8ceab88-e017-4b60-b7d8-97bed478d979.png)
+
+C++ is undoubtedly a complex language, but it doesn’t offer a higher abstraction as Python and Golang do. Also, it offers you a way to use a preferred standard language version (i.e., C++14) for compilation — so you can use only minimal features with C++ since modern C++ features complicated C++ development. C++ is more than three decades old and optimized its performance since the early computing era.
+
+
+## C and C++ Are Academic-Friendly Languages
+
+Programmers typically start programming in various stages of their careers. Some programmers learn programming at their schooling age with their first computer devices. However, most programmers improve their programming skills during their academic period at universities. Fortunately, almost all universities start teaching programming with C by giving students a chance to learn how a computer program works with hardware components. I wrote the following article to explain further how a computer program connects with hardware:
+
+Later, most universities teach data structures and algorithms basics with C++ without using complex parts of C++. University students typically get into competitive programming after learning algorithms-related subjects. Most competitive programmers prefer C++ because of speed, availability of inbuilt optimal data structures, and minimal syntax.
+
+Rust is undoubtedly a good language with memory safety, performance, and inbuilt features, but Rusty syntax is not friendly for developers who write code for the first time. Go is a good language for industrial purposes where your team expects C-like minimal efficient code and a Python-like development environment. But, for academic use, Go’s abstraction is too minimal and doesn’t align properly with traditional pseudocodes, so academic instructors will never use Go as a replacement for C/C++.
+
+The following story explains why every programmer should start programming with C:
+
+
+## Modern Alternatives Still Need C, and They Focus on Different Goals
+
+As mentioned before, all POSIX operating systems and non-POSIX operating systems (i.e., Windows) offer a C library to handle kernel operations, so calling kernel features from C/C++ is easy since we don’t need to write language-specific bindings or third-party wrappers. Some operating systems even pre-include GNU C/C++ compilers and debuggers to motivate C/C++ development. If we use Rust and Go, we need language-specific third-party bindings to communicate with operating system APIs. Modern alternative languages still offer ways to call C code. For example, Go offers you the Cgo feature to call C code.
+
+Almost all C/C++ alternatives strive to offer missing C++ features with very different language syntax than C++. If a programmer seeks alternatives for C/C++, they typically expect a smooth and less time-consuming migration process. Also, they don’t expect to learn a new language to find solutions for C/C++ features they don’t like.
+
+Programmers designed and improved C for low-level programming use cases, and there is no modern language created solely targeting C’s goals. C++ made C more futuristic and uplifted from the low-level programming stage. Rust, Go, D, and Carbon are C/C++ alternatives — not replacements, and these alternatives have their own future goals.
+
+The following story explains why every programmer needs to learn the C++ language during their careers:
+
+
+## Conclusion
+Past programmers wrote our computer history during the C/C++ evolution period. They built operating system kernels, programming languages, database systems, mobile operating systems, and networking software in C and C++. Almost all modern web services work today, thanks to C/C++. For example, the most popular web server software, like Apache HTTP and Nginx, uses C/C++ as implementation languages. Past programmers wrote nearly all popular internal web browser and networking software components in C/C++. Web developers love to select Java and Node.js for web services, but both Java and Node.js came because of C/C++.
+
+Some programmers consider popular languages like Rust, Go, D, and Carbon as C/C++ replacements. Meanwhile, some programmers consider using those languages as C/C++ alternatives that might replace C/C++ in the future. These modern languages are made for specific purposes and requirements — not to replace C/C++.
+
+Microsoft created TypeScript, but we still use JavaScript. Jetbrains created Kotlin, but we still use Java. Hundreds of C/C++ alternatives come, but programmers will still use C/C++ since rewriting the C/C++-oriented computer history isn’t practical. It doesn’t mean that C and C++ are the best languages— alternatives may perform better than C/C++ in some aspects (i.e., complexity, memory safety, etc.) — but they cannot enter where C/C++ lives since the past programmers wrote the entire modern computer history with C and C++.
+
