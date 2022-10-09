@@ -1,6 +1,6 @@
 export default {
-  github: 'https://github.com/shuding/nextra',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
+  github: 'https://github.com/Samael3003',
+  docsRepositoryBase: 'https://github.com/Samael3003',
   titleSuffix: ' – Samael3003',
   logo: (
     <>
@@ -62,6 +62,6 @@ export default {
   nextLinks: true,
   footer: true,
   footerEditLink: 'Edit this page on GitHub',
-  footerText: <>MIT {new Date().getFullYear()} © Nextra.</>,
+  footerText: <>MIT {new Date().getFullYear()} © Samael3003.</>,
   unstable_faviconGlyph: '👋',
 }
