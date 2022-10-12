@@ -1,9 +1,8 @@
 {
   "index": "Introduction",
   "about": "About",
-  "features": "Features",
-  "themes": "Themes",
-  "advanced": "Advanced",
+  "linux": "Linux",
+  "hello-friend": "Hello Friend",
   "posts": "Posts",
   "tech-daily": "Tech-Daily"
   
