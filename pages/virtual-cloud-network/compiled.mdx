@@ -1,0 +1,83 @@
+# "Networking in the Cloud"
+
+## Introduction :
+
+The Blog is presented by the Students of Vishwakarma Institute of Technology, S.Y.B.Tech EnTC-D. 
+
+**Names of Students are :**
+  > Sahil Ashok Sawant - 12111257
+ 
+  > Sanchit Sawarkar - 12111516
+ 
+  > Riya Shah - 12110533
+  
+  > Tayyab Sheikh - 12111104
+
+**Reference :** 
+  > [Oracle Cloud - India](https://www.oracle.com/in/cloud/) - Official Oracle website of India
+  
+  > [Oracle Virtual Labs](https://docs.oracle.com/en/learn/lab_virtual_network/index.html) - Virtual Lab assignments, headed by Mr.Eli Schilling, Director of Product Management, Oracle Cloud
+  
+  > [Oracle Docs](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm) - Official Documentations of Oracle Cloud Networking
+  
+  > [Oracle TECH-Network](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/ocis/create_vcn/create_vcn.html) - Oracle Community for Virtual Help Centre.
+
+## Getting Started :
+
+We're going to be talking through various components of networking, security, and design in the Oracle Cloud. To get things started, we're going to focus on the most fundamental component, which is the virtual cloud network. Now, the **virtual cloud network** is a software-defined network that you create in the Oracle Cloud that is completely isolated, independent, and separate from every other network construct. 
+To understand how the VCN deployment works, we first have to take a look at the proximity or the locality of where we would provision a VCN or Virtual Cloud Network. So what we're going to do is go ahead and bring in the world map, and what you'll see here, as we draw across the screen, a listing of many of our cloud regions available around the world. Now, this is just a short set. 
+
+![image](https://user-images.githubusercontent.com/103866475/205811884-6a7dd666-3dca-421c-a2e2-502a211e2fd3.png)
+
+But what you'll find in a region is a collection of infrastructure and services that are completely independent and segmented from every other region around the world. Now, these regions are also interconnected, but you can think about these as a place to deploy sets of infrastructure and sets of services for your application ecosystem. 
+
+## Creating a VCN
+
+All right, we're going to go ahead, and we want to start by building our first virtual cloud network. Now, we have our virtual cloud network. It's contained within a selected region here. And the first thing we do when we set up our virtual cloud network is to define a CIDR range, or an IP range. These are contiguous IPv4 IP addresses that will be used with this software-defined network. For the sake of this blog series, we're just going to use **10.10.0.0/16**. That means that **10.10 is the network address**, and then we have **.0.0 for all of the addressable space** within our virtual cloud network. 
+
+![image](https://user-images.githubusercontent.com/103866475/205812038-ef5c7234-e2db-46b8-bef2-4400671b41d1.png)
+
+
+Now, the next piece, once we have this VCN, is we can segment or we can subdivide into what we call **subnets**. So we're just going provide us four different subnets within our virtual cloud network. You'll see each of these subnets has its own **CIDR range** its own block of **IP addresses**, which is contained within the overarching range of the VCN itself. 
+
+## Subnets and Domains
+
+Now, you're probably wondering why one of these subnets is a little bit bigger than the other subnets on the screen here. Well, to really drill into this, what we're going to do is talk about **availability domains**, because several of our global regions have multiple availability domains or individual independent physical data centers. So if we just go ahead and draw onto the screen here those **availability domain representations**, you'll see that some of these subnets exist in a single AD, whereas this subnet across the top actually spans all of the availability domains in the given region. 
+
+![image](https://user-images.githubusercontent.com/103866475/205811990-ec0694b5-eaa5-4621-9dcf-51068ae59089.png)
+
+
+So the key difference here is **regional subnet** versus **availability domain specific subnet**. Now, within the subnets, your private IP addresses are portable between resources. That means with a regional subnet, if I have a cluster of compute resources and I need to fail over from one to the other, those private IP addresses are actually portable between availability domains, between physical locations in this particular region. 
+
+## Public Subnets and Private Subnets
+
+Now, the final piece to keep in mind when it comes to subnets is the notion of **public subnets** versus **private subnets**. The key difference here is that private subnets are going to be more tightly controlled and designed in a way to limit your ability to connect directly to or directly from the internet. This is a security control which also prevents accidental exposure of resources stored in private subnets. Now, the public subnet, just like it sounds, it's designed to allow you to configure direct internet access to and from these resources in the designated public subnets. 
+
+
+## Getting Started :
+
+All right, so we have our virtual cloud network. We have our subnets , we talked about last time. Now we want to get into the notion of connecting into or out of our virtual network space here. 
+
+![image](https://user-images.githubusercontent.com/103866475/205823517-3931687b-2042-47e0-84e5-96f1ce8d623a.png)
+
+
+## Internet Gateway
+
+So the first thing we want to talk about here is this notion of a **internet gateway**. Just as it sounds, it's a virtual gateway device or virtual gateway component that allows us to route traffic from inside of our VCN out to the public internet and vice versa. 
+
+## NAT Gateway
+
+The next gateway we have right here is going to be our **NAT gateway**, our Network Address Translation gateway. The NAT gateway is designed to allow you to connect from your private subnets out to the public internet. But it doesn't give you the same ingress capability. So it allows you to establish a secure, controlled connection from private resources that might need to interact with resources on the internet. But it also, at the same time, protects them from unwanted ingress communications. 
+
+## Public Services
+
+Now, on the other side over here, we have an **object storage bucket** , an **API gateway**, a few **other public services**. These are things that exist in your or in our cloud space, in our Oracle Cloud regions. But they exist outside of your virtual cloud network. 
+
+## Service Gateway
+
+So how do we go about communicating with those resources without going all the way out to the internet and then back into the cloud space to talk to these services? Well, that's where the **service gateway** comes into play here. And the service gateway allows us to directly route traffic from any subnet inside of our VCN out to these public cloud services in the same region. And it does this in a secure, controlled fashion without having to, of course, access or reach out to the public internet to communicate with these services. 
+
+## Dynamic Routing Gateway
+
+And last but not least is our **Dynamic Routing gateway**. So the Dynamic Routing gateway, here, is going to allow us to connect to external networks or remote networks. This could be an on-premises network that we connect to over VPN or FastConnect. This also allows us the ability to connect to other virtual cloud networks in different Oracle Cloud regions. That method is called remote peering, or VCN peering, and it's something we'r going to talk about in a future video. Hope you enjoyed this section. Come back. We're going to talk about routing and security
+
