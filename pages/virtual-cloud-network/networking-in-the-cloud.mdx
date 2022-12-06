@@ -3,7 +3,7 @@
 ## Introduction :
 The Blog is presented by the Students of Vishwakarma Institute of Technology, S.Y.B.Tech EnTC-D. 
 
-Names of Students are :
+**Names of Students are :**
   > Sahil Ashok Sawant - 12111257
  
   > Sanchit Sawarkar - 12111516
@@ -12,7 +12,7 @@ Names of Students are :
   
   > Tayyab Sheikh - 12111104
 
-Reference : 
+**Reference :** 
   > [Oracle Cloud - India](https://www.oracle.com/in/cloud/) - Official Oracle website of India
   
   > [Oracle Virtual Labs](https://docs.oracle.com/en/learn/lab_virtual_network/index.html) - Virtual Lab assignments, headed by Mr.Eli Schilling, Director of Product Management, Oracle Cloud
@@ -21,7 +21,9 @@ Reference :
   
   > [Oracle TECH-Network](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/ocis/create_vcn/create_vcn.html) - Oracle Community for Virtual Help Centre.
 
-We're going to be talking through various components of networking, security, and design in the Oracle Cloud. To get things started, we're going to focus on the most fundamental component, which is the virtual cloud network. Now, the virtual cloud network is a software-defined network that you create in the Oracle Cloud that is completely isolated, independent, and separate from every other network construct. 
+## Getting Started :
+
+We're going to be talking through various components of networking, security, and design in the Oracle Cloud. To get things started, we're going to focus on the most fundamental component, which is the virtual cloud network. Now, the **virtual cloud network** is a software-defined network that you create in the Oracle Cloud that is completely isolated, independent, and separate from every other network construct. 
 To understand how the VCN deployment works, we first have to take a look at the proximity or the locality of where we would provision a VCN or Virtual Cloud Network. So what we're going to do is go ahead and bring in the world map, and what you'll see here, as we draw across the screen, a listing of many of our cloud regions available around the world. Now, this is just a short set. 
 
 ![image](https://user-images.githubusercontent.com/103866475/205811884-6a7dd666-3dca-421c-a2e2-502a211e2fd3.png)
@@ -30,25 +32,25 @@ But what you'll find in a region is a collection of infrastructure and services 
 
 ## Creating a VCN
 
-All right, we're going to go ahead, and we want to start by building our first virtual cloud network. Now, we have our virtual cloud network. It's contained within a selected region here. And the first thing we do when we set up our virtual cloud network is to define a CIDR range, or an IP range. These are contiguous IPv4 IP addresses that will be used with this software-defined network. For the sake of this blog series, we're just going to use 10.10.0.0/16. That means that 10.10 is the network address, and then we have .0.0 for all of the addressable space within our virtual cloud network. 
+All right, we're going to go ahead, and we want to start by building our first virtual cloud network. Now, we have our virtual cloud network. It's contained within a selected region here. And the first thing we do when we set up our virtual cloud network is to define a CIDR range, or an IP range. These are contiguous IPv4 IP addresses that will be used with this software-defined network. For the sake of this blog series, we're just going to use **10.10.0.0/16**. That means that **10.10 is the network address**, and then we have **.0.0 for all of the addressable space** within our virtual cloud network. 
 
 ![image](https://user-images.githubusercontent.com/103866475/205812038-ef5c7234-e2db-46b8-bef2-4400671b41d1.png)
 
 
-Now, the next piece, once we have this VCN, is we can segment or we can subdivide into what we call subnets. So we're just going provide us four different subnets within our virtual cloud network. You'll see each of these subnets has its own CIDR range its own block of IP addresses, which is contained within the overarching range of the VCN itself. 
+Now, the next piece, once we have this VCN, is we can segment or we can subdivide into what we call **subnets**. So we're just going provide us four different subnets within our virtual cloud network. You'll see each of these subnets has its own **CIDR range** its own block of **IP addresses**, which is contained within the overarching range of the VCN itself. 
 
 ## Subnets and Domains
 
-Now, you're probably wondering why one of these subnets is a little bit bigger than the other subnets on the screen here. Well, to really drill into this, what we're going to do is talk about availability domains, because several of our global regions have multiple availability domains or individual independent physical data centers. So if we just go ahead and draw onto the screen here those availability domain representations, you'll see that some of these subnets exist in a single AD, whereas this subnet across the top actually spans all of the availability domains in the given region. 
+Now, you're probably wondering why one of these subnets is a little bit bigger than the other subnets on the screen here. Well, to really drill into this, what we're going to do is talk about **availability domains**, because several of our global regions have multiple availability domains or individual independent physical data centers. So if we just go ahead and draw onto the screen here those **availability domain representations**, you'll see that some of these subnets exist in a single AD, whereas this subnet across the top actually spans all of the availability domains in the given region. 
 
 ![image](https://user-images.githubusercontent.com/103866475/205811990-ec0694b5-eaa5-4621-9dcf-51068ae59089.png)
 
 
-So the key difference here is regional subnet versus availability domain specific subnet. Now, within the subnets, your private IP addresses are portable between resources. That means with a regional subnet, if I have a cluster of compute resources and I need to fail over from one to the other, those private IP addresses are actually portable between availability domains, between physical locations in this particular region. 
+So the key difference here is **regional subnet** versus **availability domain specific subnet**. Now, within the subnets, your private IP addresses are portable between resources. That means with a regional subnet, if I have a cluster of compute resources and I need to fail over from one to the other, those private IP addresses are actually portable between availability domains, between physical locations in this particular region. 
 
 ## Public Subnets and Private Subnets
 
-Now, the final piece to keep in mind when it comes to subnets is the notion of public subnets versus private subnets. The key difference here is that private subnets are going to be more tightly controlled and designed in a way to limit your ability to connect directly to or directly from the internet. This is a security control which also prevents accidental exposure of resources stored in private subnets. Now, the public subnet, just like it sounds, it's designed to allow you to configure direct internet access to and from these resources in the designated public subnets. 
+Now, the final piece to keep in mind when it comes to subnets is the notion of **public subnets** versus **private subnets**. The key difference here is that private subnets are going to be more tightly controlled and designed in a way to limit your ability to connect directly to or directly from the internet. This is a security control which also prevents accidental exposure of resources stored in private subnets. Now, the public subnet, just like it sounds, it's designed to allow you to configure direct internet access to and from these resources in the designated public subnets. 
 
 ## Is it enougn ?
 
