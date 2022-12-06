@@ -1,0 +1,26 @@
+# Virtual Cloud Network -  "GATEWAYS"
+
+All right, so we have our virtual cloud network. We have our subnets , we talked about last time. Now we want to get into the notion of connecting into or out of our virtual network space here. 
+
+## Internet Gateway
+
+So the first thing we want to talk about here is this notion of a **internet gateway**. Just as it sounds, it's a virtual gateway device or virtual gateway component that allows us to route traffic from inside of our VCN out to the public internet and vice versa. 
+
+## NAT Gateway
+
+The next gateway we have right here is going to be our **NAT gateway**, our Network Address Translation gateway. The NAT gateway is designed to allow you to connect from your private subnets out to the public internet. But it doesn't give you the same ingress capability. So it allows you to establish a secure, controlled connection from private resources that might need to interact with resources on the internet. But it also, at the same time, protects them from unwanted ingress communications. 
+
+## Public Services
+
+Now, on the other side over here, we have an **object storage bucket** , an **API gateway**, a few **other public services**. These are things that exist in your or in our cloud space, in our Oracle Cloud regions. But they exist outside of your virtual cloud network. 
+
+## Service Gateway
+
+So how do we go about communicating with those resources without going all the way out to the internet and then back into the cloud space to talk to these services? Well, that's where the service gateway comes into play here. And the service gateway allows us to directly route traffic from any subnet inside of our VCN out to these public cloud services in the same region. And it does this in a secure, controlled fashion without having to, of course, access or reach out to the public internet to communicate with these services. 
+
+## Dynamic Routing Gateway
+
+And last but not least is our Dynamic Routing gateway. So the Dynamic Routing gateway, here, is going to allow us to connect to external networks or remote networks. This could be an on-premises network that we connect to over VPN or FastConnect. This also allows us the ability to connect to other virtual cloud networks in different Oracle Cloud regions. That method is called remote peering, or VCN peering, and it's something we'r going to talk about in a future video. Hope you enjoyed this section. Come back. We're going to talk about routing and security
+
+Thanks for joining us,
+and have a great day.
