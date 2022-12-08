@@ -14,7 +14,7 @@ Being an integral part of electronics project, 555 Timer IC is very often used i
 
 ### Voltage Divider Network-
 
-    Three 5KΩ resistors that are wired in series between the supply voltage Vcc and ground to form the voltage divider network. If there is only one 5KΩ resistor, this network provides a voltage of Vcc/3 between a point and ground. Similar to this, if there are only two 5KΩ resistors, it generates a voltage of 2Vcc/3 between a point and ground.
+    Three 5KΩ resistors that are wired in series between the supply voltage Vcc and ground to form the voltage divider network. If there is only one 5KΩ resistor, this network provides a voltage of Vcc / 3 between a point and ground. Similar to this, if there are only two 5KΩ resistors, it generates a voltage of 2Vcc / 3 between a point and ground.
     
 ### Comparator-
 
@@ -71,7 +71,7 @@ One Short Multivibrator is another name for Monostable Multivibrator. As its nam
 
 When a negative trigger is applied to the Trigger pin of 555 Timer, output of lower comparator will become HIGH and output of upper comparator will be LOW, since the capacitor voltage is zero. This makes the output HIGH. The discharge transistor turns OFF and the capacitor starts charging through resistor R to Vcc.
 
-When the capacitor voltage becomes greater than 2/3 Vcc, output of upper comparator becomes HIGH and that of lower comparator remains LOW, so the output becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
+When the capacitor voltage becomes greater than 2 / 3 Vcc, output of upper comparator becomes HIGH and that of lower comparator remains LOW, so the output becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
 
 The circuit remains in its stable state (Output LOW) until next trigger occurs.
 
@@ -89,9 +89,9 @@ The circuit remains in its stable state (Output LOW) until next trigger occurs.
 In this mode the IC becomes an oscillator or also called Free Running Multivibrator. It doesn’t have a stable state and continuously switches between High and Low without application of any external trigger.
 ![image](https://user-images.githubusercontent.com/103866475/206346848-ce3cfa5d-9c4c-43b8-91ed-efd67b873a98.png)
 
-When initially power is turned ON, Trigger Pin voltage is below Vcc/3, that makes the lower comparator output HIGH and SETS the flip flop and output of the 555 chip is HIGH. The discharge transistor turns OFF and the capacitor starts charging through resistor R to Vcc.
+When initially power is turned ON, Trigger Pin voltage is below Vcc / 3, that makes the lower comparator output HIGH and SETS the flip flop and output of the 555 chip is HIGH. The discharge transistor turns OFF and the capacitor starts charging through resistor R to Vcc.
 
-Now when capacitor voltage becomes greater than 2/3Vcc, then the voltage of non-inverting end becomes higher than the inverting end of the comparator. This makes Upper comparator output HIGH and RESETs the Flip flop, output of 555 chip becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
+Now when capacitor voltage becomes greater than 2 / 3Vcc, then the voltage of non-inverting end becomes higher than the inverting end of the comparator. This makes Upper comparator output HIGH and RESETs the Flip flop, output of 555 chip becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
 
 This charging and discharging of capacitor continues and a rectangular oscillating output wave for is generated.
 ![image](https://user-images.githubusercontent.com/103866475/206346887-54272684-cfd7-48b6-a493-2740705c569c.png)
@@ -104,11 +104,11 @@ This charging and discharging of capacitor continues and a rectangular oscillati
 
 3. Bohare, Abhishek. “Study of Timer IC 555.”
 
-4. https://www.electricaltechnology.org/2014/12/555-timer.html
+4. [electricaltechnology](https://www.electricaltechnology.org/2014/12/555-timer.html)
 
-5. https://byjusexamprep.com/monostable-multivibrator-i
+5. [byjusexamprep](https://byjusexamprep.com/monostable-multivibrator-i)
 
-6. https://www.electronics-tutorials.ws/waveforms/monostable.html
+6. [electronics-tutorials](https://www.electronics-tutorials.ws/waveforms/monostable.html_)
 
-7. https://en.wikipedia.org/wiki/555_timer_IC
+7. [wikipedia](https://en.wikipedia.org/wiki/555_timer_IC)
 
