@@ -1,0 +1,114 @@
+# Applications of Timer IC555
+
+## What is 555 Timer IC?
+
+The 555 timer IC is an Integrated Circuit (chip) used in a variety of timer, delay, pulse generation, and oscillator applications. In more simple words, by varying the duty cycle (50% or 100%) , it can produce accurate timing pulses.
+
+555 Timer is a flexible and most usable device in the electronics circuits and designs which work for both stable and monostable states. It can provide time delay from microseconds up to many hours.
+
+Being an integral part of electronics project, 555 Timer IC is very often used in simple to complex electronics projects. The standard 555 timer IC consists of 2 diodes, 25 transistors, 15 resistors installed in an 8 pin dual in-line package.
+
+![image](https://user-images.githubusercontent.com/103866475/206346156-209524dd-778d-403d-8c9c-3e506ba30e2a.png)
+
+## Functioning
+
+### Voltage Divider Network-
+
+    Three 5KΩ resistors that are wired in series between the supply voltage Vcc and ground to form the voltage divider network. If there is only one 5KΩ resistor, this network provides a voltage of Vcc/3 between a point and ground. Similar to this, if there are only two 5KΩ resistors, it generates a voltage of 2Vcc/3 between a point and ground.
+    
+### Comparator-
+
+    The internal circuit of IC555 timer consists of two comparators- an Upper Comparator (UC) and a Lower Comparator (LC). It creates on output after comparing the two inputs that are applied on it.
+
+    The output of a comparator will be +Vsat if the voltage at an op-amp’s non-inverting terminal is higher than the voltage at its inverting terminal. In digital form, this can be represented as Logic High (‘1’).
+
+    The output of a comparator will be -Vsat if the voltage at an op-amp’s non-inverting terminal is less than or equal to the voltage at its inverting terminal. In digital form, this can be represented as Logic Low (‘0’).
+
+### SR Flip Flop –
+
+    SR flip-flop operates with either positive clock transitions or negative clock transitions. S and R are its two inputs, and Q(t) and Q(t)’ are its two outputs. The two outputs, Q(t) and Q(t)’, complement one another.
+
+    As shown in fig. 1, the outputs of the Lower Comparator (LC) and Upper Comparator (UC) are used as the inputs of the SR flip-flop.
+   
+   
+## Operating Modes-
+
+  The 555 Timer has three operating modes, bistable, monostable and astable mode.
+
+# Bistable Mode
+
+Two external resistors and two push buttons are connected with the internal circuit of the IC 555 to work in bistable configuration(as seen in fig. 2).
+
+![image](https://user-images.githubusercontent.com/103866475/206346499-09c07544-7aec-4871-a596-fab0ec9d475f.png)
+
+
+Due to the external two resistors connecting the trigger and reset pins of the Vcc of the IC, they are always high. The input state will be low if the push buttons are pushed because they are wired between these pins and the ground.
+
+When the Trigger pushbutton is pressed, the state at the Trigger input changes to Low, causing the comparator to output High, which causes the flip-flop Q-bar output to change to Low. This will be inverted at the output step, resulting in a high output from the 555 timer.
+
+Even if the trigger pushbutton is not pressed, the output will still be high because in that scenario, the flip- flop’s input R and S will both be zero, meaning that the flip-flop won’t modify the prior state. By pressing the Reset pushbutton, which also resets the flip-flop and the complete integrated circuit ,the output can be made the output low.
+
+![image](https://user-images.githubusercontent.com/103866475/206346552-e0adf9dc-cd2d-4312-819b-00c159064ce1.png)
+
+
+## Applications of Bistable Multivibrator-
+
+    · It is used in different storage devices and for counting binary numbers.
+
+        Used for frequency division in different circuits.
+        It is used for the production of different clock pulses.
+
+    · Used in different circuits as a toggle switch.
+
+        It is used for different relay controllers.
+
+# Monostable Mode-
+
+One Short Multivibrator is another name for Monostable Multivibrator. As its name suggests, it only has one stable state, and when triggered, it enters an unstable state for a set amount of time T. The time period T is determined by the RC time constant in the circuit.
+
+![image](https://user-images.githubusercontent.com/103866475/206346720-3eb18735-98ae-4464-b8cf-674a26428597.png)
+
+
+When a negative trigger is applied to the Trigger pin of 555 Timer, output of lower comparator will become HIGH and output of upper comparator will be LOW, since the capacitor voltage is zero. This makes the output HIGH. The discharge transistor turns OFF and the capacitor starts charging through resistor R to Vcc.
+
+When the capacitor voltage becomes greater than 2/3 Vcc, output of upper comparator becomes HIGH and that of lower comparator remains LOW, so the output becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
+
+The circuit remains in its stable state (Output LOW) until next trigger occurs.
+
+![image](https://user-images.githubusercontent.com/103866475/206346833-c5c2cf8e-a802-4da0-b009-c6827bc26887.png)
+
+
+### Applications of Monostable Multivibrator-
+
+    · Monostable Multivibrator mode are used in various circuits to produce a time delay of few seconds to hours depending on the RC Circuit.
+
+    · A Monostable multivibrator generates new, clean, and sharp pulses from distorted and worn-out pulses.
+
+# Astable mode-
+
+In this mode the IC becomes an oscillator or also called Free Running Multivibrator. It doesn’t have a stable state and continuously switches between High and Low without application of any external trigger.
+![image](https://user-images.githubusercontent.com/103866475/206346848-ce3cfa5d-9c4c-43b8-91ed-efd67b873a98.png)
+
+When initially power is turned ON, Trigger Pin voltage is below Vcc/3, that makes the lower comparator output HIGH and SETS the flip flop and output of the 555 chip is HIGH. The discharge transistor turns OFF and the capacitor starts charging through resistor R to Vcc.
+
+Now when capacitor voltage becomes greater than 2/3Vcc, then the voltage of non-inverting end becomes higher than the inverting end of the comparator. This makes Upper comparator output HIGH and RESETs the Flip flop, output of 555 chip becomes LOW. This turns ON the discharge transistor and the capacitor discharges.
+
+This charging and discharging of capacitor continues and a rectangular oscillating output wave for is generated.
+![image](https://user-images.githubusercontent.com/103866475/206346887-54272684-cfd7-48b6-a493-2740705c569c.png)
+
+## References
+
+1. AlShidani, Shadan, et al. “Applications of 555 Timer for Development of Low-Cost System.” Advanced Energy and Control Systems. Springer, Singapore, 2022. 207–216.
+
+2. Singh, Prabhakar. “IC555 Timer and applications.” (2019).
+
+3. Bohare, Abhishek. “Study of Timer IC 555.”
+
+4. https://www.electricaltechnology.org/2014/12/555-timer.html
+
+5. https://byjusexamprep.com/monostable-multivibrator-i
+
+6. https://www.electronics-tutorials.ws/waveforms/monostable.html
+
+7. https://en.wikipedia.org/wiki/555_timer_IC
+
